@@ -1,27 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="40dp"
+     >
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.96" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+            <TextView
+                android:id="@+id/txt_new_task_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="New Task Entry"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Year"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_selector"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_year"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_year">
+
+                <Spinner
+                    android:id="@+id/year_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_year" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_selector"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_category"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_category">
+
+                <Spinner
+                    android:id="@+id/category_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_new_issue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="New Task/Issue"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_category" />
+
+
+                <EditText
+                    android:id="@+id/edt_new_issue"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:layout_marginStart="15dp"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:background="@drawable/custom_spinner_selector"
+                    app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                    app:layout_constraintTop_toTopOf="@id/txt_new_issue"
+                    app:layout_constraintStart_toEndOf="@id/txt_new_issue"/>
+
+
+            <TextView
+                android:id="@+id/txt_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="120dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Priority"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_new_issue" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_selector"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_priority"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_priority">
+
+                <Spinner
+                    android:id="@+id/priority_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_task_allotted_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Issue/Task \nAlloted To"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_priority" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_spinner_selector"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="@id/txt_task_allotted_to"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_task_allotted_to">
+
+                <Spinner
+                    android:id="@+id/txt_task_allotted_to_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_target_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Target Date"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_task_allotted_to" />
+
+            <EditText
+                android:id="@+id/edt_date"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:background="@drawable/custom_spinner_selector"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_target_date"/>
+            <TextView
+                android:id="@+id/txt_choose_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Choose File"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/txt_target_date" />
+
+            <Button
+                android:id="@+id/btn_choose_file"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Upload File"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:backgroundTint="@color/app_theme_color"
+                app:layout_constraintEnd_toStartOf="@id/guideline_end"
+                app:layout_constraintTop_toTopOf="@id/txt_choose_file"
+                app:layout_constraintBottom_toBottomOf="@id/txt_choose_file"/>
+
+            <Button
+                android:id="@+id/btn_submit_new_task"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                android:backgroundTint="@color/app_theme_color"
+              app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintTop_toBottomOf="@id/txt_choose_file"/>
+
+
+
 
 
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
     </ScrollView>

@@ -5,7 +5,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#7723DCDC"
     android:padding="8dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -15,7 +14,7 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:ayout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
@@ -43,7 +42,7 @@
                     android:text="New Task Entry"
                     android:textAlignment="center"
                     android:textColor="#232121"
-                    android:textSize="30sp"
+                    android:textSize="26sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -74,7 +73,7 @@
                     android:text="Update/Delete Task"
                     android:textAlignment="center"
                     android:textColor="#232121"
-                    android:textSize="30sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -105,7 +104,7 @@
                     android:text="View Reports"
                     android:textAlignment="center"
                     android:textColor="#232121"
-                    android:textSize="30sp"
+                    android:textSize="26sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
