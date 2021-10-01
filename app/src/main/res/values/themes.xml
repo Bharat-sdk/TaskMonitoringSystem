@@ -3,7 +3,7 @@
     <style name="Theme.TaskMonitoringSystem" parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/app_theme_color</item>
         <item name="colorPrimaryDark">@color/app_theme_color</item>
-        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/black</item>
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
     </style>
