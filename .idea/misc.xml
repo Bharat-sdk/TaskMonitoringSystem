@@ -5,7 +5,11 @@
       <map>
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/drawable-v24/work_button_selector.xml" value="0.19427083333333334" />
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/drawable/custom_spinne_selectorr.xml" value="0.19427083333333334" />
+        <entry key="..\:/TaskMonitoringSystem/app/src/main/res/drawable/custom_spinner_selector.xml" value="0.1984375" />
+        <entry key="..\:/TaskMonitoringSystem/app/src/main/res/drawable/custom_spinner_selector_2.xml" value="0.1984375" />
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/home_activity.xml" value="0.22" />
+        <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/issue_list_activity.xml" value="0.18229166666666666" />
+        <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/item_issue_list.xml" value="0.33" />
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/new_task_activity.xml" value="0.2" />
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/spin_dropdown_text_view.xml" value="0.16530797101449277" />
         <entry key="..\:/TaskMonitoringSystem/app/src/main/res/layout/spin_text_view.xml" value="0.178125" />

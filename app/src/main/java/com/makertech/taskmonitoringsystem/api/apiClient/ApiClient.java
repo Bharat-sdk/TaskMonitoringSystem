@@ -1,11 +1,9 @@
-package com.makertech.taskmonitoringsystem.ui.data.api.apiClient;
+package com.makertech.taskmonitoringsystem.api.apiClient;
 
-import com.makertech.taskmonitoringsystem.ui.data.api.ApiConstants;
-import com.makertech.taskmonitoringsystem.ui.data.api.ApiServices;
+import com.makertech.taskmonitoringsystem.api.ApiConstants;
+import com.makertech.taskmonitoringsystem.api.ApiServices;
 
-import java.security.SecureRandom;
 import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;

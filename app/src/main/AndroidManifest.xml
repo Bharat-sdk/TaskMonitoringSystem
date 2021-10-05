@@ -23,6 +23,7 @@
         </activity>
 
         <activity android:name=".ui.NewTask.NewTaskActivity" />
+        <activity android:name=".ui.UpdateDeleteTask.IssueListActivity"/>
     </application>
 
 </manifest>

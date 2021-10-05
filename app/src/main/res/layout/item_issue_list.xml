@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="tmsTask"
+            type="com.makertech.taskmonitoringsystem.api.TmsTask" />
+    </data>
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#4FB5F1C0"
+  >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:padding="15dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true">
+<LinearLayout
+    android:id="@+id/layout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+ >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mons_semibold"
+            android:text="Year"
+            android:textSize="16sp"
+            />
+
+
+        <TextView
+            android:id="@+id/item_txt_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mons_semibold"
+            android:text="@{tmsTask.year}"
+            android:padding="6dp"
+            android:background="@drawable/custom_spinner_selector_2"
+            android:textSize="16sp"
+            android:layout_marginStart="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mons_semibold"
+        android:text="Category"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        />
+
+
+    <TextView
+        android:id="@+id/item_txt_category"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/custom_spinner_selector_2"
+        android:fontFamily="@font/mons_semibold"
+        android:padding="6dp"
+        android:text="@{tmsTask.category}"
+        android:textSize="16sp" />
+</LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Priority"
+                android:textSize="16sp"
+                />
+
+
+            <TextView
+                android:id="@+id/item_txt_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="@{tmsTask.priority}"
+                android:padding="6dp"
+                android:background="@drawable/custom_spinner_selector_2"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Target Date"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                />
+
+
+            <TextView
+                android:id="@+id/item_txt_target_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="@{tmsTask.targetDate}"
+                android:padding="6dp"
+                android:background="@drawable/custom_spinner_selector_2"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout2"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="Issue / Task"
+                android:textSize="16sp"
+                />
+            <TextView
+                android:id="@+id/item_txt_issue_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mons_semibold"
+                android:text="@{tmsTask.taskSubject}"
+                android:background="@drawable/custom_spinner_selector_2"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="4dp"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

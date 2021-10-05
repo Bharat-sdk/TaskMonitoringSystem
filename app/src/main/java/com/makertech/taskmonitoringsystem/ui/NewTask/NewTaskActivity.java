@@ -1,24 +1,22 @@
 package com.makertech.taskmonitoringsystem.ui.NewTask;
 
 import android.app.DatePickerDialog;
-import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
-
 import androidx.lifecycle.Observer;
 
 import com.makertech.taskmonitoringsystem.BR;
 import com.makertech.taskmonitoringsystem.R;
 import com.makertech.taskmonitoringsystem.databinding.NewTaskActivityBinding;
 import com.makertech.taskmonitoringsystem.ui.base.BaseActivity;
-import com.makertech.taskmonitoringsystem.ui.data.api.ApiServices;
-import com.makertech.taskmonitoringsystem.ui.data.api.TmsTask;
-import com.makertech.taskmonitoringsystem.ui.data.api.apiClient.ApiClient;
-import com.makertech.taskmonitoringsystem.ui.data.api.repository.RepositoryImplimentation;
+import com.makertech.taskmonitoringsystem.api.ApiServices;
+import com.makertech.taskmonitoringsystem.api.TmsTask;
+import com.makertech.taskmonitoringsystem.api.apiClient.ApiClient;
+import com.makertech.taskmonitoringsystem.api.repository.RepositoryImplimentation;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,7 +25,6 @@ import java.util.List;
 
 public class NewTaskActivity extends BaseActivity<NewTaskActivityBinding,NewActivityViewModel> {
     Calendar calendar;
-    TmsTask tmsTask;
     String time;
     ApiClient apiClient = new ApiClient();
 
@@ -68,13 +65,14 @@ public class NewTaskActivity extends BaseActivity<NewTaskActivityBinding,NewActi
 
         });
 
+
         getViewBinding().btnSubmitNewTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Calendar calendar = Calendar.getInstance();
                 setNewTask(String.valueOf(calendar.getTimeInMillis()),
                         "allotted to",
-                        null,
+                        "null",
                         getViewBinding().edtDate.getText().toString(),
                         getViewBinding().yearSpinner.getSelectedItem().toString(),
                         getViewBinding().edtNewIssue.getText().toString(),
@@ -110,7 +108,6 @@ public class NewTaskActivity extends BaseActivity<NewTaskActivityBinding,NewActi
         int currentYear =  calendar.get(Calendar.YEAR);
         for (int i = currentYear; i<=2026; i++)
         {
-
             yearList.add(String.valueOf((i-1) + " - " + (i)));
         }
 
@@ -120,9 +117,9 @@ public class NewTaskActivity extends BaseActivity<NewTaskActivityBinding,NewActi
     public List<String> createPriorityList(){
         List<String> priorityList = new ArrayList<>();
 
-        priorityList.add("Low");
-        priorityList.add("Medium");
         priorityList.add("High");
+        priorityList.add("Medium");
+        priorityList.add("Normal");
 
         return priorityList;
     }
@@ -132,7 +129,8 @@ public class NewTaskActivity extends BaseActivity<NewTaskActivityBinding,NewActi
 
         categoryList.add("State");
         categoryList.add("Central");
-        categoryList.add("CM Helpline");
+        categoryList.add("CourtCases");
+        categoryList.add("CMHelpline");
 
         return categoryList;
     }

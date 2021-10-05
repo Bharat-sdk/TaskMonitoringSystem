@@ -2,7 +2,7 @@ package com.makertech.taskmonitoringsystem.ui.base;
 
 import androidx.lifecycle.ViewModel;
 
-import com.makertech.taskmonitoringsystem.ui.data.api.repository.AppRepository;
+import com.makertech.taskmonitoringsystem.api.repository.AppRepository;
 
 public abstract class BaseViewModel  extends ViewModel {
 

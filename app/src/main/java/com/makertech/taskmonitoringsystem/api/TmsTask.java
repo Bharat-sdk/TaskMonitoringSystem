@@ -1,4 +1,4 @@
-package com.makertech.taskmonitoringsystem.ui.data.api;
+package com.makertech.taskmonitoringsystem.api;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -91,19 +91,4 @@ public class TmsTask{
 	public String getPriority(){
 		return priority;
 	}
-
-	@Override
- 	public String toString(){
-		return 
-			"ResponseItem{" + 
-			"alloted_to = '" + allotedTo + '\'' + 
-			",end_Date = '" + endDate + '\'' + 
-			",target_Date = '" + targetDate + '\'' + 
-			",year = '" + year + '\'' + 
-			",task_subject = '" + taskSubject + '\'' + 
-			",id = '" + id + '\'' + 
-			",category = '" + category + '\'' + 
-			",priority = '" + priority + '\'' + 
-			"}";
-		}
 }

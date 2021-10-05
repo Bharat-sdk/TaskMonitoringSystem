@@ -5,15 +5,14 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.makertech.taskmonitoringsystem.ui.base.BaseViewModel;
-import com.makertech.taskmonitoringsystem.ui.data.api.TmsTask;
-import com.makertech.taskmonitoringsystem.ui.data.api.repository.AppRepository;
+import com.makertech.taskmonitoringsystem.api.TmsTask;
+import com.makertech.taskmonitoringsystem.api.repository.AppRepository;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import timber.log.Timber;
 
 public class NewActivityViewModel extends BaseViewModel {
     private MutableLiveData<List<TmsTask>> getTmsTasks;

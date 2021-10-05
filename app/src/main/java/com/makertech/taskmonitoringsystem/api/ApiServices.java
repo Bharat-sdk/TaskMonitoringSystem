@@ -1,4 +1,4 @@
-package com.makertech.taskmonitoringsystem.ui.data.api;
+package com.makertech.taskmonitoringsystem.api;
 
 import java.util.List;
 

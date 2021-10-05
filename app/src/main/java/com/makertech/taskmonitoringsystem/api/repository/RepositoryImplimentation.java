@@ -1,7 +1,7 @@
-package com.makertech.taskmonitoringsystem.ui.data.api.repository;
+package com.makertech.taskmonitoringsystem.api.repository;
 
-import com.makertech.taskmonitoringsystem.ui.data.api.ApiServices;
-import com.makertech.taskmonitoringsystem.ui.data.api.TmsTask;
+import com.makertech.taskmonitoringsystem.api.ApiServices;
+import com.makertech.taskmonitoringsystem.api.TmsTask;
 
 import java.util.List;
 
