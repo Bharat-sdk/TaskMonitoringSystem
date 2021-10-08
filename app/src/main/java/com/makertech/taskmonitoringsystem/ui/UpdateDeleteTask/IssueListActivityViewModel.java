@@ -4,6 +4,7 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.android.material.tabs.TabLayout;
 import com.makertech.taskmonitoringsystem.api.TmsTask;
 import com.makertech.taskmonitoringsystem.api.repository.AppRepository;
 import com.makertech.taskmonitoringsystem.ui.base.BaseViewModel;
@@ -33,7 +34,7 @@ public class IssueListActivityViewModel extends BaseViewModel {
             @Override
             public void onResponse(Call<List<TmsTask>> call, Response<List<TmsTask>> response) {
                 getTmsTasks.postValue(response.body());
-                Log.d("myapp", "getting a response ");
+                Log.d("myapp", "getting a response "+response.body());
 
             }
 
@@ -42,5 +43,7 @@ public class IssueListActivityViewModel extends BaseViewModel {
                 getTmsTasks.postValue(null);
             }
         });
+
+
     }
 }

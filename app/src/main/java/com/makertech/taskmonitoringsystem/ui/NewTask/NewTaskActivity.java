@@ -15,7 +15,7 @@ import com.makertech.taskmonitoringsystem.databinding.NewTaskActivityBinding;
 import com.makertech.taskmonitoringsystem.ui.base.BaseActivity;
 import com.makertech.taskmonitoringsystem.api.ApiServices;
 import com.makertech.taskmonitoringsystem.api.TmsTask;
-import com.makertech.taskmonitoringsystem.api.apiClient.ApiClient;
+import com.makertech.taskmonitoringsystem.api.ApiClient;
 import com.makertech.taskmonitoringsystem.api.repository.RepositoryImplimentation;
 
 import java.text.SimpleDateFormat;

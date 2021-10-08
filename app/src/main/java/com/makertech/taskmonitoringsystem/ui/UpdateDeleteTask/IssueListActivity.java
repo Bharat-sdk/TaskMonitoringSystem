@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.makertech.taskmonitoringsystem.BR;
 import com.makertech.taskmonitoringsystem.R;
 import com.makertech.taskmonitoringsystem.api.TmsTask;
-import com.makertech.taskmonitoringsystem.api.apiClient.ApiClient;
+import com.makertech.taskmonitoringsystem.api.ApiClient;
 import com.makertech.taskmonitoringsystem.api.repository.AppRepository;
 import com.makertech.taskmonitoringsystem.api.repository.RepositoryImplimentation;
 import com.makertech.taskmonitoringsystem.databinding.IssueListActivityBinding;
@@ -22,13 +22,11 @@ public class IssueListActivity extends BaseActivity<IssueListActivityBinding,Iss
     ApiClient apiClient = new ApiClient();
     @Override
     protected void initView() {
+
+        IssueListActivityAdapter issueListActivityAdapter = new IssueListActivityAdapter(initialViewModel().getTmsTasks().getValue());
+        getViewBinding().recyclerViewIssueList.setAdapter(issueListActivityAdapter);
+        Log.d("TAG", "initView: "+initialViewModel().getTmsTasks().getValue());
         setObserver();
-        initialViewModel().getTmsTasksList();
-
-
-
-
-
     }
 
     @Override
@@ -48,15 +46,13 @@ public class IssueListActivity extends BaseActivity<IssueListActivityBinding,Iss
 
     private void setObserver()
     {
+
         initialViewModel().getTmsTasks().observe(this, new Observer<List<TmsTask>>() {
             @Override
             public void onChanged(List<TmsTask> tmsTasks) {
-
-
                     Toast.makeText(getApplicationContext(),"Tasks Allotted",Toast.LENGTH_LONG).show();
-                    Log.d("myapp", "is not Empty "+String.valueOf(tmsTasks.size()));
-                IssueListActivityAdapter issueListActivityAdapter = new IssueListActivityAdapter(tmsTasks);
-                getViewBinding().recyclerViewIssueList.setAdapter(issueListActivityAdapter);
+                Log.d("TAG  adasd", "initViewasdasdasd: "+initialViewModel().getTmsTasks().getValue());
+
             }
         });
     }

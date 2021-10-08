@@ -35,22 +35,7 @@ public class NewActivityViewModel extends BaseViewModel {
         return newTmsTasks;
     }
 
-    public void getT4msTasksList()
-    {
-        getAppRepository().getTmsTaskList().enqueue(new Callback<List<TmsTask>>() {
-            @Override
-            public void onResponse(Call<List<TmsTask>> call, Response<List<TmsTask>> response) {
-                getTmsTasks.postValue(response.body());
-                Log.d("myapp","onResponse "+response.body().toString());
-            }
 
-            @Override
-            public void onFailure(Call<List<TmsTask>> call, Throwable t) {
-                getTmsTasks.postValue(null);
-                Log.d("myapp","onFaliure "+call.toString(),t);
-            }
-        });
-    }
     public void setTmsTasks(TmsTask tmsTask)
     {
         getAppRepository().createTmsTask(tmsTask).enqueue(new Callback<TmsTask>() {
